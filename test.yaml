@@ -1,11 +1,11 @@
-kind: PersistentVolumeClaim
-apiVersion: v1
+apiVersion: v2
+kind: PersistentVolume
 metadata:
   name: redis-leader-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
-  storageClassName: tkgs-storage-class-name
+  - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
+  storageClassName: tkgs-storage-class-name
